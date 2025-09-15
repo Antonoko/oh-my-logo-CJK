@@ -45,7 +45,9 @@ uv run oh-my-logo-cjk "你好世界" 7px grad-blue --color
 oh-my-logo-cjk <text> [font] [palette] [options]
 ```
 - **text** - 必填，用英文双引号包裹，例如："你好世界"
-- ***font*** - 项目自带了两种字体配置： 7px 和 9px。你可以通过 `fonts/fonts.json` 添加更多字体和配置。项目默认使用了 [丁卯点阵体](https://3type.cn/fonts/dinkie_bitmap/index.html) 的 demo 版，能输出的文字有限，你可以购买完整版字体进行替换、以获得完整输出字库；
+- ***font*** - 项目自带了两种字体配置： 7px, 9px, 和 7px-ja (Japanese font)。你可以通过 `fonts/fonts.json` 添加更多字体和配置。
+  - 7px 和 9px 的字体默认使用了 [丁卯点阵体](https://3type.cn/fonts/dinkie_bitmap/index.html) 的 demo 版，能输出的文字有限，你可以购买完整版字体进行替换、以获得完整输出字库
+  - 7px-ja 使用 門真なむ (Num Kadoma) 设计的  [美咲フォント(字形)](https://littlelimit.net/misaki.htm)，该字体允许无限次使用、复制和分发。详情请参阅 [License (许可协议)] (https://littlelimit.net/font.htm#license)
 - ***palette*** - 渐变调色盘：
     - 通过命令 `--gallery --color`，可以一次性预览所有色板，方便直接选一个最喜欢的：
 
@@ -117,7 +119,8 @@ cat art.txt
       "font_size": 10,
       "grid_size": [10, 10],
       "offset": [0, -1]
-    }
+    },
+    ... // 更多字体配置
   ]
 }
 ```
@@ -146,6 +149,15 @@ uv run oh-my-logo-cjk run "你好世界" 9px ocean -d horizontal -pw hf -s shade
 ```bash
 uv run oh-my-logo-cjk run "你好世界" sunset --reverse-gradient --color-space oklab --color
 ```
+
+- 日本語を出力するには (输出日语的方法)：
+
+```bash
+uv run oh-my-logo-cjk "こんにちは世界" 7px-ja mint --color
+```
+
+![Preview](https://raw.githubusercontent.com/Antonoko/oh-my-logo-CJK/refs/heads/main/images/preview-ja.png)
+
 
 ---
 
