@@ -22,6 +22,17 @@
             "offset": [
                 0,1
             ]
+        },
+        {
+            "name": "7px-ja",
+            "path": "misaki_gothic.ttf",
+            "font_size": 8,
+            "grid_size": [
+                9,9
+            ],
+            "offset": [
+                0,0
+            ]
         }
     ]
 }
